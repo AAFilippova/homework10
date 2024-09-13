@@ -1,0 +1,1 @@
+[{"model": "pet_products.product", "pk": 4, "fields": {"title": "Bone", "description": "", "price": "400.00", "archived": false, "product_category": 3, "animal_category": 1}}, {"model": "pet_products.product", "pk": 5, "fields": {"title": "bracelet", "description": "", "price": "300.00", "archived": false, "product_category": 4, "animal_category": 2}}]

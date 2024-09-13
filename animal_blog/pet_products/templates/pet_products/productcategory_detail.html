@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ page_title }}
+{% endblock %}
+
+{% block body %}
+    <h1>Product Category</h1>
+
+    <div>
+        <strong>{{ object.name }}</strong> <br>
+        ({{ object.description }})
+    </div>
+
+    {% include 'pet_products/components/back-to-animalblog-index.html' %}
+{% endblock %}

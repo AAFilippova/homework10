@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	Index page
+{% endblock %}
+
+{% block body %}
+	<h1>Welcome to the wonderful world of pets!</h1>
+
+  <h3>Blog:</h3>
+    <ul>
+  <li>
+    <a href="{% url 'animalblog_app:create_article' %}">Create Article</a>
+  </li>
+  <li>
+    <a href="{% url 'animalblog_app:list_article' %}">Articles list</a>
+  </li>
+  <li>
+    <a href="{% url 'animalblog_app:authors_index' %}">Authors list</a>
+  </li>
+  <li>
+    <a href="{% url 'animalblog_app:list_category' %}">Category List</a>
+  </li>
+    </ul>
+
+  <h3>Shop:</h3>
+    <ul>
+  <li>
+    <a href="{% url 'pet_products:products_index' %}">Products list</a>
+  </li>
+  <li>
+    <a href="{% url 'pet_products:orders_index' %}">Orders list</a>
+  </li>
+   <li>
+    <a href="{% url 'pet_products:list_product_category' %}">Product Category List</a>
+  </li>
+    </ul>
+    <dir>
+     {% if user.is_authenticated %}
+            <form action="{% url 'my_auth:logout' %}" method="post">
+                {% csrf_token %}
+                <input type="submit" value="logout">
+            </form>
+        {% else %}
+            <a href="{% url 'my_auth:login' %}">login</a>
+        {% endif %}
+{% endblock %}

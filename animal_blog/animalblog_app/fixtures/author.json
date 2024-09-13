@@ -1,0 +1,1 @@
+[{"model": "animalblog_app.author", "pk": 1, "fields": {"username": "sam44", "name": "Sam Samov", "description": "tetxt"}}, {"model": "animalblog_app.author", "pk": 2, "fields": {"username": "bild123", "name": "Bil Debilov", "description": "werty"}}, {"model": "animalblog_app.author", "pk": 3, "fields": {"username": "ku123", "name": "Kim Ku", "description": "43"}}]
